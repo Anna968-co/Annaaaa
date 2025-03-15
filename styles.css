@@ -1,4 +1,4 @@
-/* Celkový vzhled */
+/* Resetování stylů */
 * {
     margin: 0;
     padding: 0;
@@ -7,31 +7,34 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    background-color: #e9f5f2;
+    background-color: #f4f4f9;
     color: #333;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
+/* Kontejner pro vycentrování obsahu */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
-/* Hlavní header */
+/* Header */
 header {
-    background-color: #2e8b57;
+    background-color: #1e3d58;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
 nav ul li {
@@ -43,50 +46,141 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
 }
 
 /* Hero sekce */
 .hero {
-    background-color: #88d9e5;
-    color: #333;
-    padding: 40px 0;
+    background: linear-gradient(135deg, rgba(48, 213, 200, 0.9), rgba(46, 139, 87, 0.9));
+    color: white;
+    padding: 100px 0;
     text-align: center;
+    position: relative;
 }
 
-.hero img {
-    width: 100%;
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f3b200;
+}
+
+/* Sekce o rybách */
+.about {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.about img {
+    width: 80%;
+    max-width: 700px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Content sekce */
+/* Sekce pro ochranu ryb */
 .content {
-    padding: 40px 0;
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
 .content h2 {
+    font-size: 36px;
     margin-bottom: 20px;
-    font-size: 28px;
 }
 
 .content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.content img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    font-size: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
 /* Footer */
 footer {
-    background-color: #2e8b57;
+    background-color: #1e3d58;
     color: white;
-    text-align: center;
     padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Media Queries pro responzivitu */
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .about h2, .content h2 {
+        font-size: 28px;
+    }
+
+    .about p, .content p {
+        font-size: 18px;
+    }
+
+    .about img {
+        width: 100%;
+    }
 }
