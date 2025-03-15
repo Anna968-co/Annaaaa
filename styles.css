@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-/* Vlastní barvy a pozadí */
+/* Nastavení písma */
 body {
     font-family: 'Open Sans', sans-serif;
-    color: white;
-    background-color: #2f3542;
+    color: #fff;
+    background-color: #2c3e50;
     line-height: 1.6;
 }
 
@@ -19,143 +19,92 @@ body {
     margin: 0 auto;
 }
 
-/* Hlavní header */
+/* Header */
 header {
     background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
     color: white;
-    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
     font-size: 40px;
-    margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
     list-style-type: none;
+    margin-top: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Hero sekce s parallax efektem */
+/* Hero sekce */
 .hero {
-    background: url('https://www.example.com/images/underwater-hero.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('https://www.example.com/images/underwater-hero.jpg') no-repeat center center/cover;
     color: white;
-    padding: 120px 0;
     text-align: center;
-    position: relative;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    padding: 100px 0;
     background-attachment: fixed;
-    animation: fadeIn 3s ease-in-out;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 10;
 }
 
 .hero h2 {
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 22px;
     margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
-    padding: 15px 30px;
     background-color: #FFD700;
     color: #333;
-    text-decoration: none;
     font-size: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
     border-radius: 5px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #f3b200;
-    transform: scale(1.1);
+    background-color: #f39c12;
 }
 
-/* Sekce o rybách s texturou pozadí */
-.about {
+/* Sekce pro Typy a Ochranu */
+section {
     padding: 80px 0;
     text-align: center;
-    background-color: #333;
-    background-image: url('https://www.example.com/images/sea-weed-texture.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-    animation: slideUp 1.5s ease-out;
 }
 
-.about h2 {
+h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.about p {
-    font-size: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+ul {
+    list-style-type: none;
+    margin-top: 20px;
 }
 
-.about img {
-    width: 80%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Sekce pro ochranu ryb */
-.content {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #444;
-}
-
-.content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.content p {
-    font-size: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
+ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 /* Footer */
@@ -164,44 +113,8 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
     font-size: 16px;
-}
-
-/* Animace pro pozadí a sekce */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-    0% { transform: translateY(100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-/* Media Queries pro responzivitu */
-@media screen and (max-width: 768px) {
-    .hero h2 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .cta-button {
-        font-size: 16px;
-        padding: 12px 25px;
-    }
-
-    .about h2, .content h2 {
-        font-size: 28px;
-    }
-
-    .about p, .content p {
-        font-size: 18px;
-    }
 }
