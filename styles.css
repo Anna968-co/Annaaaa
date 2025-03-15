@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Vlastní barvy a pozadí */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    color: white;
+    background-color: #2f3542;
     line-height: 1.6;
 }
 
@@ -18,13 +19,13 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
+/* Hlavní header */
 header {
-    background-color: #1e3d58;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 30px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -51,16 +52,20 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #FFD700;
 }
 
-/* Hero sekce */
+/* Hero sekce s parallax efektem */
 .hero {
-    background: linear-gradient(135deg, rgba(48, 213, 200, 0.9), rgba(46, 139, 87, 0.9));
+    background: url('https://www.example.com/images/underwater-hero.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
     position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+    animation: fadeIn 3s ease-in-out;
 }
 
 .hero-content {
@@ -69,8 +74,9 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
@@ -79,28 +85,36 @@ nav ul li a:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
     padding: 15px 30px;
-    background-color: #ffd700;
+    background-color: #FFD700;
     color: #333;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
     background-color: #f3b200;
+    transform: scale(1.1);
 }
 
-/* Sekce o rybách */
+/* Sekce o rybách s texturou pozadí */
 .about {
     padding: 80px 0;
     text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    background-image: url('https://www.example.com/images/sea-weed-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1.5s ease-out;
 }
 
 .about h2 {
@@ -121,14 +135,14 @@ nav ul li a:hover {
     max-width: 700px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Sekce pro ochranu ryb */
 .content {
     padding: 60px 0;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #444;
 }
 
 .content h2 {
@@ -150,11 +164,22 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
     font-size: 16px;
+}
+
+/* Animace pro pozadí a sekce */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 /* Media Queries pro responzivitu */
@@ -178,9 +203,5 @@ footer p {
 
     .about p, .content p {
         font-size: 18px;
-    }
-
-    .about img {
-        width: 100%;
     }
 }
