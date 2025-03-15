@@ -1,10 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
+/* Celkový vzhled */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #e9f5f2;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Hlavní header */
 header {
     background-color: #2e8b57;
     color: white;
@@ -25,33 +42,51 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
 }
 
+/* Hero sekce */
+.hero {
+    background-color: #88d9e5;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Content sekce */
+.content {
+    padding: 40px 0;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Footer */
 footer {
     background-color: #2e8b57;
     color: white;
     text-align: center;
-    padding: 20px;
-}
-
-section {
-    padding: 40px 20px;
-    margin: 20px;
-}
-
-h1, h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-img {
-    margin-top: 20px;
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
+    padding: 20px 0;
 }
