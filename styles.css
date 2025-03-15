@@ -1,9 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Zajišťuje, že padding a border neovlivní velikost elementů */
+}
+
+html, body {
+    height: 100%;  /* Zajistí, že stránka zabírá celou výšku okna prohlížeče */
+    width: 100%;   /* Zajistí, že stránka zabírá celou šířku okna prohlížeče */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
     background-color: #f0f8ff;
-    color: #333;
 }
 
 header {
@@ -28,23 +38,9 @@ nav ul li a {
     font-size: 18px;
 }
 
-.hero {
-    background: url('fish-hero.jpg') center center no-repeat;
-    background-size: cover;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-}
-
-.info {
+main {
+    flex: 1;  /* Tento styl zajistí, že hlavní obsah vyplní zbylou výšku */
     padding: 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.about, .contact {
-    padding: 30px;
-    background-color: #e0ffff;
     text-align: center;
 }
 
@@ -52,21 +48,5 @@ footer {
     background-color: #20b2aa;
     padding: 10px;
     text-align: center;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-form input[type="submit"] {
-    background-color: #20b2aa;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #3cb371;
+    margin-top: auto;  /* Tento styl zajistí, že patička bude vždy dole */
 }
