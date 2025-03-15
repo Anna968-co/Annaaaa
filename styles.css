@@ -41,7 +41,7 @@ nav ul li a {
 main {
     flex: 1;  /* Tento styl zajistí, že hlavní obsah vyplní zbylou výšku */
     padding: 20px;
-    text-align: center;
+    text-align: center;  /* Zarovnání textu na střed */
 }
 
 footer {
@@ -49,4 +49,7 @@ footer {
     padding: 10px;
     text-align: center;
     margin-top: auto;  /* Tento styl zajistí, že patička bude vždy dole */
+    position: relative;
+    bottom: 0;
+    width: 100%;  /* Patička zabírá celou šířku stránky */
 }
